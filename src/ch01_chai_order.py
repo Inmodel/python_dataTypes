@@ -47,23 +47,33 @@ Examples:
 
 
 def get_chai_order_length(order):
-    # Your code here
-    pass
+    if not isinstance(order, str):
+        return -1
+    return len(order.strip())
 
 
 def shout_chai_order(order):
-    # Your code here
-    pass
+    if not isinstance(order, str):
+        return ""
+    stripped = order.strip()
+    if not stripped:
+        return ""
+    return stripped.upper()
 
 
 def whisper_chai_order(order):
-    # Your code here
-    pass
+    if not isinstance(order, str):
+        return ""
+    stripped = order.strip()
+    if not stripped:
+        return ""
+    return stripped.lower()
 
 
 def has_special_ingredient(order, ingredient):
-    # Your code here
-    pass
+    if not isinstance(order, str) or not isinstance(ingredient, str):
+        return False
+    return ingredient.lower() in order.lower()
 
 
 def get_first_and_last_char(order):
